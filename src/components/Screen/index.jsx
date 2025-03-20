@@ -5,11 +5,12 @@ import Music from './Music'
 import Games from './Games'
 import Settings from './Settings'
 
-const Screen = ({ showMenu }) => {
-  const options = ['Music', 'Games', 'Settings']
-  const [activeOpt, setActiveOpt] = useState('Music')
-  const [selectedOpt, setSelectedOpt] = useState('')
-
+const Screen = ({ 
+  OPTIONS, 
+  showMenu, 
+  activeOpt, 
+  selectedOpt 
+}) => {
   return (
     <div className='screen-container'>
       {showMenu && (
@@ -17,12 +18,11 @@ const Screen = ({ showMenu }) => {
           {!selectedOpt && (
             <div className='menu-container'>
               <ul>
-                {options.map((option, index) => (
+                {OPTIONS.map((option, index) => (
                   <MenuOption 
                     key={index} 
                     text={option} 
                     isHighlighted={activeOpt == option}
-                    setSelectedOpt={setSelectedOpt}
                   />
                 ))}
               </ul>

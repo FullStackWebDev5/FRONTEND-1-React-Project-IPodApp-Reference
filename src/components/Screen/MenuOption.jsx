@@ -1,10 +1,9 @@
 import { MdChevronRight } from "react-icons/md";
 
-const MenuOption = ({ text, isHighlighted, setSelectedOpt }) => {
+const MenuOption = ({ text, isHighlighted }) => {
   return (
     <li 
       className={`px-3 ${isHighlighted ? 'bg-primary' : ''}`}
-      onClick={() => setSelectedOpt(text)}
     >
       {text} <MdChevronRight />
     </li>

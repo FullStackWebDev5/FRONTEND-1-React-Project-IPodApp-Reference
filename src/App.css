@@ -1,0 +1,7 @@
+.ipod-container {
+  width: 20em;
+  height: 30em;
+  background: radial-gradient(circle, rgba(162,170,173,1) 0%, rgba(85,85,85,1) 100%);
+  margin: 2em auto;
+  border-radius: 5px;
+}
